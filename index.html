@@ -20,10 +20,11 @@ Released under the MIT license: http://jsbin.mit-license.org
   <main>
     <section id="head">
       <div class="pozycja"><img class="pozycja" src="http://i.imgur.com/Vh35eCs.png">
-        <div>
+        <div id="face">
           <img id="mouth-03" src="http://i.imgur.com/gqpO4IK.png">
           <img id="eyes-03" src="http://i.imgur.com/mrvDcck.png">
-          <img id="brow-04" src="http://i.imgur.com/xrk3RML.png"></div>
+          <img id="brow-04" src="http://i.imgur.com/xrk3RML.png">
+        </div>
       </div>
     </section>
     <hr>
@@ -39,5 +40,13 @@ Released under the MIT license: http://jsbin.mit-license.org
       <img id="brow-03" src="http://i.imgur.com/I5PU6C6.png">
     </section>
   </main>
+  <script>
+    $(document).ready(function(){
+      $("#stickers img").click(function(){
+        $('#face img').attr('src','images/slides/'+$(this).attr('id')+'.png');
+       return false;
+      })
+    });
+  </script>
 </body>
 </html>
